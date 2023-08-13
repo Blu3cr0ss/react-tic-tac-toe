@@ -77,17 +77,17 @@ const Board: FC<BoardProps> = ({ h = 3, w = 3 }) => {
         Game Over!
       </h1>
       <br />
-      <div className="board">{
-        zip(rangeH, rangeW).map((xs, y) =>
-        xs.map((_, x) => (
-          <Square
-            key={`${x}${y}`}
-            step={steps?.[`${x}${y}`] ?? Step.NONE}
-            onClick={() => onClick(x, y)}
-          />
-        ))
-      );
-      }</div>
+      <div className="board">
+        {zip(rangeH, rangeW).map((xs, y) =>
+          xs.map((_, x) => (
+            <Square
+              key={`${x}${y}`}
+              step={steps?.[`${x}${y}`] ?? Step.NONE}
+              onClick={() => onClick(x, y)}
+            />
+          ))
+        )}
+      </div>
     </>
   );
 };
