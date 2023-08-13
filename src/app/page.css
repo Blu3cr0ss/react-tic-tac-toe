@@ -3,13 +3,9 @@
   width: 100px;
   height: 100px;
   border: 1px solid;
-}
-
-.square > h1 {
   font-weight: bold;
   font-size: 60px;
 }
-
 .board {
   width: 300px;
   height: 300px;
